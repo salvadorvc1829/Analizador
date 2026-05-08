@@ -1,2 +1,2 @@
 # Analizador
-En este repositorio se subira mi analizador lexico
+En este repositorio se subira mi analizador lexico Valenci Castillo Salvador
