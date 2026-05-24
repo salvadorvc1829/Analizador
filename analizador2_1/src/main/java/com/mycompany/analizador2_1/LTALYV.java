@@ -13,6 +13,7 @@ public class LTALYV {
         this.id=id;
         this.variables=variables;
         Verificar();
+        
     }
 
     public void Verificar() throws Exception {
@@ -82,7 +83,9 @@ public class LTALYV {
             } else {
                 throw new Exception("Contenido invalido: "+expr.charAt(i));
             }
-
+            if (i >= expr.length()) {
+                throw new Exception("Error: Expresión incompleta. Falta un operando después del operador '" + op + "'");
+            }
             char c = op.charAt(0);
 
             while (!ops.isEmpty() && prioridad(ops.peek()) >= prioridad(c)) {
